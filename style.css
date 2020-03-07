@@ -1,0 +1,332 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30.1.2019, 23:57:40
+    Author     : Sampo
+*/
+
+/*GENERAL STYLE*/
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body,
+#mymap {
+    height: 100%;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 0em;
+}
+
+li:first-line {
+    text-indent: 0em;
+}
+
+.leaflet-left .leaflet-control {
+    margin-left: 13px;
+}
+
+.leaflet-container .leaflet-control-zoom {
+    margin-left: 13px;
+    margin-top: 70px;
+}
+
+.leaflet-bottom .leaflet-control {
+    margin-bottom: 5px;
+}
+
+.leaflet-popup-content-wrapper {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.leaflet-popup-content-wrapper .leaflet-popup-content {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.leaflet-popup-tip-container {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.control-label col-sm-5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*LAYER CONTROL STYLE*/
+.leaflet-control-layers-toggle{
+    width: auto;
+    background-position:3px 50% ;
+    background-size: 20px 20px;
+    text-decoration: none;
+    line-height:36px;
+}
+
+.leaflet-control-layers:hover {
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+}
+
+#controlTitle1 {
+    margin-top: -2px;
+    margin-bottom: 4px;
+}
+
+#controlTitle2 {
+    margin-top: -2px;
+    margin-bottom: 2px;
+}
+
+
+/*MAP VIEW PROPERTIES*/
+/*#mymap {
+    position: relative;
+    width: 100.0%;
+    height: 100.0%;
+    left: 0.0%;
+    top: 0.0%;
+}*/
+
+#mymap {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+
+
+/*SENDBOX STYLE*/
+.sendbox {
+    z-index: 2;
+    width: 330px;
+    height: 50px;
+    position: absolute;
+    left: 0%;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0); /*hide box and its shadow */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+
+
+
+
+/*FORM-GROUP LIKERT AND RADIO BUTTONS STYLE*/
+.likert li {
+    margin-top: 11px;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+.likert li:hover{
+    background-color: #dfd;    
+}
+
+.likert li:checked + label{
+    background-color:#bfb;
+    border-color: #4c4;
+}
+
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    margin-top: -1px;
+    vertical-align: top;
+}
+
+
+.form-group {
+    font-size: 10pt;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+input {
+    margin-top: 5px;
+}
+
+ul {
+    margin-top: -1px;
+}
+
+.parkspotcolumn {
+    margin-top: 5px;
+}
+
+#parkspot {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+#parktime {
+    font-size: 18px;
+    width: 100%;
+}
+
+select option {
+    font-size: 13pt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*BUTTONS*/
+button {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #4CAF50; /* Green */
+    color: black;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+/*SUBMIT RECORDS*/
+#buttonsubmitall:enabled {
+    background-color: darkgreen;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    font-size: 17pt;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    background-position: center;
+    transition: background 0.8s;
+}
+
+#buttonsubmitall:hover:enabled {
+  background: #12ba57 radial-gradient(circle, transparent 1%, #12ba57 1%) center/15000%;
+}
+
+#buttonsubmitall:active:enabled {
+    vertical-align: top;
+    font-size: 14pt;
+    background-color: #0ccc5a;
+    background-size: 100%;
+    transition: background 0s;
+/*    padding: 15px 13px 6px;*/
+}
+
+/*DISABLED VERSION OF SUBMITBUTTON*/
+#buttonsubmitall:disabled,
+#buttonsubmitall[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  width: 100%;
+  height: 100%;
+  font-size: 17pt;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  background-position: center;
+  transition: background 0.8s;
+}
+
+/*INPUT FIELD STUFF*/
+input[type="datetime-local"]{
+    font-size: 13pt;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="number"]{
+    font-size: 13pt;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*HTML CLOSE BUTTON STYLE*/
+#close {
+    float:right;
+    font-size: 20px;
+    display:inline-block;
+    padding:5px 5px;
+    background: rgba(255, 255, 255, 0.0);
+    cursor: pointer;
+}
+
+#close:hover {
+    float:right;
+    display:inline-block;
+    padding:5px 5px;
+    background:#ccc;
+    color:#fff;
+    cursor: pointer;
+}
+
+
+/*IMAGES*/
+div.sucimage {
+   content:url("thankyou.png");
+   height: 100%;
+   width: 100%;
+}​
+
+
+
+
+
+.tabspanel{
+    height:500px; 
+    width:450px; 
+    overflow:scroll;
+}
+
+
+/*JQUERY UI TABS*/
+#tabsikkuna { 
+    padding: 0px; 
+    background: none; 
+    border-width: 0px; 
+    overflow: hidden;
+} 
+
+/*#tabsikkuna .ui-tabs-panel { 
+    background: #f5f3e5 url(http://code.jquery.com/ui/1.8.23/themes/south-street/images/ui-bg_highlight-hard_100_f5f3e5_1x100.png) repeat-x scroll 50% top; 
+    border-width: 0px 1px 1px 1px; 
+    overflow: auto; 
+    
+}*/
+.tabscontainer{
+    width: 550px;
+}
+
+.tabspanel{
+    height: 500px;
+    overflow: auto;
+}
+
+#tabsikkuna .ui-tabs-nav { 
+    padding-left: 0px; 
+    background: transparent; 
+    border-width: 0px 0px 1px 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+    overflow: hidden; 
+}
+
+
+/*MAKE TEXT IN MAP JUSTIFIED*/
+/*div {
+  text-align: justify;
+}*/
+
+/*div:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}*/
